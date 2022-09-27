@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.module": "php",
+        "stdio.h": "c",
+        "random": "c"
+    }
+}
