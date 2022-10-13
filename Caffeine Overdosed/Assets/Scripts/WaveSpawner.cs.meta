@@ -3,7 +3,10 @@ guid: 658ddfcde20a81a41b61b2b59d2f80e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemyPrefab: {instanceID: 0}
+  - spawnPoint: {instanceID: 0}
+  - waveCountdownText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

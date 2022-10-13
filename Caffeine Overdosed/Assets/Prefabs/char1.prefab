@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8562485414684599255}
   - component: {fileID: 789813500978165922}
   - component: {fileID: 1902263761868954064}
+  - component: {fileID: 2888717361834130748}
   m_Layer: 0
   m_Name: char1
   m_TagString: Enemy
@@ -26,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8958449141604691424}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 15.57, y: 2.5, z: -4.72}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalPosition: {x: 14.96, y: 2.5, z: 7.5}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,3 +106,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2888717361834130748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958449141604691424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7ba86be69154d43b37bceecd841271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2173258547892681841}
   - component: {fileID: 6879268852448346964}
   - component: {fileID: 1251908903609208877}
+  - component: {fileID: -555033814688165952}
   m_Layer: 0
   m_Name: Minion
   m_TagString: Enemy
@@ -97,3 +98,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-555033814688165952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4990395160404412313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7ba86be69154d43b37bceecd841271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
