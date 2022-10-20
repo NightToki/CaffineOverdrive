@@ -13,13 +13,20 @@ public class Minion : MonoBehaviour
     }
     void Update()
     {
+        var pos = transform.position.x;
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized*speed*Time.deltaTime, Space.World);
-
+        if(target.position.x - transform.position.x > 0){
+            transform.rotation = Quaternion.Euler(90,180,0);
+        }
+        else{
+            transform.rotation = Quaternion.Euler(-90,0,90);
+        }
         if(Vector3.Distance(transform.position, target.position) <= 0.4f)
         {
             GetNextWaypoint();
         }
+
     }
     void GetNextWaypoint()
     {
