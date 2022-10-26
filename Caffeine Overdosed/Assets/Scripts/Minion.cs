@@ -46,10 +46,16 @@ public class Minion : MonoBehaviour
     {
         if(wavepointIndex >= Waypoints.points.Length - 1)
         {
-            Destroy(gameObject);
+            endPath();
             return;
         }
         wavepointIndex++;
         target = Waypoints.points[wavepointIndex];
+    }
+
+    void endPath()
+    {
+        PlayerStats.Lives--;
+        Destroy(gameObject);
     }
 }
