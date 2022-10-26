@@ -1,15 +1,29 @@
 
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Minion : MonoBehaviour
 {
     public float speed = 10f;
+    public int health = 100;
     private Transform target;
     private int wavepointIndex = 0;
     void Start()
     {
         target = Waypoints.points[0];
 
+    }
+    public void TakeDamage(int amount)
+    {
+        health -= amount;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Destroy(gameObject);
     }
     void Update()
     {
