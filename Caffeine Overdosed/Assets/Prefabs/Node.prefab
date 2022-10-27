@@ -114,3 +114,20 @@ MonoBehaviour:
   positionOffset: {x: 0, y: 0, z: 0}
   notEnoughMoneyColor: {r: 0.9150943, g: 0, b: 0, a: 1}
   turret: {fileID: 0}
+  Panel: {fileID: 3249523454611610974, guid: bd34ce1371cebd0478a338663260639f, type: 3}
+  definedButton: {fileID: 0}
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3249523454611610974, guid: bd34ce1371cebd0478a338663260639f, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

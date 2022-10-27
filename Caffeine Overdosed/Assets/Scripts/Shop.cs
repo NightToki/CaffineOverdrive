@@ -13,6 +13,7 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
     }
+    
     public void SelectStandardTurret()
     {
         Debug.Log("Standard Turret Purchased");
