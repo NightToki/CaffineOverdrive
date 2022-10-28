@@ -27,15 +27,14 @@ public class BuildManager : MonoBehaviour
     {
         if (PlayerStats.Money < turretToBuild.cost)
         {
-            Debug.Log("Not enough Money");
-            return;
+        Debug.Log("Not enough Money");
+        return;
         }
         PlayerStats.Money -= turretToBuild.cost;
         GameObject turret = (GameObject)Instantiate(turretToBuild.prefab, node.GetBuildPosition(),Quaternion.identity);
         node.turret = turret;
         Debug.Log("Turret Built: Money Left: " + PlayerStats.Money);
     }
- 
     public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;

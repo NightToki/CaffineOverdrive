@@ -15,6 +15,7 @@ public class Node : MonoBehaviour
     public GameObject Panel;
     public GameObject definedButton;
     public UnityEvent OnClick = new UnityEvent();
+
     void Start()
     {
         rend = GetComponent<Renderer>();
@@ -36,8 +37,9 @@ public class Node : MonoBehaviour
         }
     }
     
-    void OnMouseDown()
+    public void OnMouseDown()
     {
+        Input.GetMouseButtonDown(1);
         if (EventSystem.current.IsPointerOverGameObject())
             return;
         if (!buildManager.CanBuild)
@@ -47,7 +49,6 @@ public class Node : MonoBehaviour
             Debug.Log("Cant Build There");
             return;
         }
-
         buildManager.BuildTurretOn(this);
     }
 
@@ -73,7 +74,8 @@ public class Node : MonoBehaviour
     {
         rend.material.color = startColor;
     }
-    void Update () {
+    void Update () 
+    {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit Hit;
         

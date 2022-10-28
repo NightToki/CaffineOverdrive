@@ -10,7 +10,7 @@ public class LevelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelText.text = PlayerStats.Level.ToString() + " Level";
+        levelText.text ="Level: " +PlayerStats.Level.ToString();
 
     }
 }
