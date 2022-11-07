@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -20,5 +21,5 @@ public class PlayerStats : MonoBehaviour
         Level = startLevel;
     }
 
-   
+
 }
