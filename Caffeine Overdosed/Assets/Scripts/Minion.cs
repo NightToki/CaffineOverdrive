@@ -5,17 +5,27 @@ using UnityEngine.UI;
 public class Minion : MonoBehaviour
 {
     public float speed = 10f;
-    public int health = 100;
+    public float startHealth = 100;
+    private float health;
+     
+
     private Transform target;
     private int wavepointIndex = 0;
+
+    [Header("Unit")]
+    public Image HealthBar;
+
     void Start()
     {
         target = Waypoints.points[0];
-
+        health = startHealth;
     }
     public void TakeDamage(int amount)
     {
         health -= amount;
+
+        HealthBar.fillAmount = health/startHealth;
+
         if (health <= 0)
         {
             Die();
