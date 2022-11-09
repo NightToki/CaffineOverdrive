@@ -6,6 +6,7 @@
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
 [Oo]bj/
+/[Ll]ogs/
 [Tt]emp/
 [Uu]nityGenerated/
 # file on crash reports
@@ -39,3 +40,4 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+*.log
