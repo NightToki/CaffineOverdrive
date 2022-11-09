@@ -13,6 +13,7 @@ public class WaveSpawner : MonoBehaviour
     public TextMeshProUGUI waveCountdownText;
     public GameManager gameManager;
     // Update is called once per frame
+   
     void Update()
     {
         if (countdown <= 0f)
@@ -30,8 +31,10 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < waveNumber; i++)
         {
             SpawnEnemy();
-            yield return new WaitForSeconds(0.5f);
+            PlayerStats.Money += 25;
+            yield return new WaitForSeconds(0.7f);
         }
+        
         waveNumber++;
     }
 
