@@ -37,6 +37,7 @@ public class Minion : MonoBehaviour
     }
     void Update()
     {
+        
         var pos = transform.position.x;
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized*speed*Time.deltaTime, Space.World);
@@ -50,7 +51,7 @@ public class Minion : MonoBehaviour
         {
             GetNextWaypoint();
         }
-
+    
     }
     void GetNextWaypoint()
     {
