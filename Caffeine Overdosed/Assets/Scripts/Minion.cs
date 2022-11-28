@@ -34,6 +34,7 @@ public class Minion : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        WaveSpawner.EnemiesLeft--;
     }
     void Update()
     {
@@ -67,6 +68,7 @@ public class Minion : MonoBehaviour
     void endPath()
     {
         PlayerStats.Lives--;
+        WaveSpawner.EnemiesLeft--;
         Destroy(gameObject);
     }
 }

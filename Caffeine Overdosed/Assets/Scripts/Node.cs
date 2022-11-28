@@ -42,13 +42,14 @@ public class Node : MonoBehaviour
         Input.GetMouseButtonDown(1);
         if (EventSystem.current.IsPointerOverGameObject())
             return;
-        if (!buildManager.CanBuild)
-            return;
         if (turret != null)
         {
+            buildManager.SelectNode(this);
             Debug.Log("Cant Build There");
             return;
         }
+        if (!buildManager.CanBuild)
+            return;
         buildManager.BuildTurretOn(this);
     }
 

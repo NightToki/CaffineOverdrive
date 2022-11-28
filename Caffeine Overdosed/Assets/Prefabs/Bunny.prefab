@@ -119,4 +119,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  sprite: {fileID: 0}
+  startHealth: 100
+  HealthBar: {fileID: 7948566075972028587, guid: 8823ebd0c89602449900121fc03fea65, type: 3}

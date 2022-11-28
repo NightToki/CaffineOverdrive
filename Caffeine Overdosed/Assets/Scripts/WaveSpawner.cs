@@ -1,21 +1,27 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public static int EnemiesLeft = 0; 
+    public WaveLayout[] waves;
     public Transform spawnPoint;
         
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
-    private int waveNumber = 1;
     public TextMeshProUGUI waveCountdownText;
     public GameManager gameManager;
+
+    private int waveNumber = 0;
     // Update is called once per frame
    
     void Update()
     {
+        if(EnemiesLeft > 0){
+            return;
+        }
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -28,20 +34,25 @@ public class WaveSpawner : MonoBehaviour
     }
      IEnumerator SpawnWave()
     {
-        for (int i = 0; i < waveNumber; i++)
-        {
-            SpawnEnemy();
-            PlayerStats.Money += 25;
-            yield return new WaitForSeconds(0.7f);
+        WaveLayout wave = waves[waveNumber];
+        for(int j = 0; j < wave.minions.Length; j++){
+            EnemiesLeft += wave.minions[j].count;
+            for (int i = 0; i < wave.minions[j].count; i++)
+            {
+                SpawnEnemy(wave.minions[j].minion);
+                yield return new WaitForSeconds(1f / wave.spawnRate);
+            }
+            if (waveNumber == waves.Length)
+			{
+				Debug.Log("NICEEE YOU WON");
+				this.enabled = false;
+			}
         }
-        
-        waveNumber++;
+		waveNumber++;
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(GameObject minion)
     {
-        if(enemyPrefab!= null){
-            Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        }
+        Instantiate(minion, spawnPoint.position, spawnPoint.rotation);
     }
 }
