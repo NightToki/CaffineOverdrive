@@ -8,10 +8,12 @@ public class SelectLevel : MonoBehaviour
     public SceneFader fade;
     
     public Button[] levels;
+    public static int levelBeat;
+    public int levelCount = 0;
 
     void Start()
     {
-        int levelBeat = PlayerPrefs.GetInt("levelBeat",0); 
+        
 
         for(int ctr = 0; ctr < levels.Length; ctr++)
         {

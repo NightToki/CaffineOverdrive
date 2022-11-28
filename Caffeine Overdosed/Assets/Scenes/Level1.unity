@@ -5289,7 +5289,7 @@ GameObject:
   - component: {fileID: 537160986}
   - component: {fileID: 537160985}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Time left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5312,7 +5312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -195}
+  m_AnchoredPosition: {x: -462, y: 170}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537160985
@@ -20397,7 +20397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -33, y: -557}
+  m_AnchoredPosition: {x: -498, y: -183}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924730788
@@ -20509,7 +20509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432772a4809b37e4895b61c6d6164659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMinutes: 5
+  startMinutes: 1
   currentTimeText: {fileID: 1924730788}
 --- !u!1001 &1928737574
 PrefabInstance:

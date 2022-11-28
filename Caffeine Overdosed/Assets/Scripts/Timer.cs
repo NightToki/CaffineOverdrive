@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
+
 public class Timer : MonoBehaviour
 {
     float currentTime;
@@ -22,5 +24,16 @@ public class Timer : MonoBehaviour
         currentTime -= Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
+        if(currentTime <= 0)
+        {
+            FinishGame();
+        }
+    }
+
+    void FinishGame() 
+    {
+        Debug.Log("Victory!");
+        
+        SceneManager.LoadScene("WinScreen");
     }
 }
