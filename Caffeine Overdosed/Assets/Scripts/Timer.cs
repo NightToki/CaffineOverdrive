@@ -32,8 +32,8 @@ public class Timer : MonoBehaviour
 
     void FinishGame() 
     {
-        Debug.Log("Victory!");
+        Debug.Log("Defeat.");
         
-        SceneManager.LoadScene("WinScreen");
+        SceneManager.LoadScene("GameOver");
     }
 }
