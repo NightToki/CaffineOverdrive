@@ -9,6 +9,6 @@ public class MinionUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        minionText.text = "Minions: " + PlayerStats.Count.ToString();
+        minionText.text = "Minions Killed: " + PlayerStats.Count.ToString();
     }
 }

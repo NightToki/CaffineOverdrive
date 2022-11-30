@@ -22,6 +22,11 @@ public class WaveSpawner : MonoBehaviour
         if(EnemiesLeft > 0){
             return;
         }
+        if (EnemiesLeft== 0 && waveNumber == waves.Length)
+		{
+			this.enabled = false;   
+            gameManager.WinLevel();
+		}
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -42,11 +47,6 @@ public class WaveSpawner : MonoBehaviour
                 SpawnEnemy(wave.minions[j].minion);
                 yield return new WaitForSeconds(1f / wave.spawnRate);
             }
-            if (waveNumber == waves.Length)
-			{
-				Debug.Log("NICEEE YOU WON");
-				this.enabled = false;
-			}
         }
 		waveNumber++;
     }
