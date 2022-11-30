@@ -1078,6 +1078,9 @@ MonoBehaviour:
   missileLauncher:
     prefab: {fileID: 0}
     cost: 0
+  gunTurret:
+    prefab: {fileID: 0}
+    cost: 0
 --- !u!1 &3249523456235186548
 GameObject:
   m_ObjectHideFlags: 0
