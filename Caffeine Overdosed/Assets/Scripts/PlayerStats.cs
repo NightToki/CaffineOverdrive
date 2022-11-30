@@ -14,11 +14,15 @@ public class PlayerStats : MonoBehaviour
     public static int Level;
     public int startLevel = 1;
 
+    public static int Count;
+    public int startMinions = 0;
+
     void Start()
     {
         Money = startMoney;
         Lives = startLives;
         Level = startLevel;
+        Count = startMinions;
     }
 
 
