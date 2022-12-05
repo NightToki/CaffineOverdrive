@@ -7,6 +7,8 @@ public class Shop : MonoBehaviour
     public TurretBlueprint standardTurret;
     public TurretBlueprint missileLauncher;
     public TurretBlueprint gunTurret;
+    public TurretBlueprint gunBarrage;
+    public TurretBlueprint MissleTurret;
     BuildManager buildManager;
 
     void Start()
@@ -16,24 +18,22 @@ public class Shop : MonoBehaviour
     
     public void SelectStandardTurret()
     {
-        Debug.Log("Standard Turret Purchased");
         buildManager.SelectTurretToBuild(standardTurret);
     }
     public void SelectMissileLauncher()
 	{
-		Debug.Log("Missile Launcher Selected");
 		buildManager.SelectTurretToBuild(missileLauncher);
 	}
     public void SelectGunTurret()
 	{
-		Debug.Log("Missile Launcher Selected");
 		buildManager.SelectTurretToBuild(gunTurret);
 	}
-    //public void PurchaseAnotherTurret()
-    //{
-       // Debug.Log("Another Turret Purchased");
-        //buildManager.SetTurretToBuild(buildManager.anotherTurretPrefab);
-   // }
-    
-    
+    public void SelectGunBarrage()
+	{
+		buildManager.SelectTurretToBuild(gunBarrage);
+	}
+    public void SelectMissleTurret()
+	{
+		buildManager.SelectTurretToBuild(MissleTurret);
+	} 
 }

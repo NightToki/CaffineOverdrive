@@ -7,8 +7,14 @@ public class Node : MonoBehaviour
     public Color hoverColor;
     public Vector3 positionOffset;
     public Color notEnoughMoneyColor;
-    [Header("Optional")]
-    public GameObject turret;
+
+	[HideInInspector]
+	public GameObject turret;
+	[HideInInspector]
+	public TurretBlueprint turretBlueprint;
+	[HideInInspector]
+	public bool isUpgraded = false;
+
     private Renderer rend;
     private Color startColor;
     BuildManager buildManager;
@@ -50,9 +56,45 @@ public class Node : MonoBehaviour
         }
         if (!buildManager.CanBuild)
             return;
-        buildManager.BuildTurretOn(this);
+		BuildTurret(buildManager.GetTurretToBuild());
     }
+    void BuildTurret (TurretBlueprint blueprint)
+	{
+        if (PlayerStats.Money < blueprint.cost)
+        {
+            Debug.Log("Not enough Money");
+            return;
+        }
+        PlayerStats.Money -= blueprint.cost;
+        GameObject _turret = (GameObject)Instantiate(blueprint.prefab, GetBuildPosition(),Quaternion.identity);
+        turret = _turret;
+        turretBlueprint = blueprint;
+        Debug.Log("Turret Built");
+	}
+    public void UpgradeTurret()
+    {
+        if (PlayerStats.Money < turretBlueprint.upgradeCost)
+		{
+			Debug.Log("Not enough money to upgrade that!");
+			return;
+		}
 
+		PlayerStats.Money -= turretBlueprint.upgradeCost;
+        Destroy(turret);
+
+		GameObject _turret = (GameObject)Instantiate(turretBlueprint.upgradedPrefab, GetBuildPosition(), Quaternion.identity);
+		turret = _turret;
+
+        isUpgraded = true;
+
+		Debug.Log("Turret upgraded!");
+    }
+    public void SellTurret()
+    {
+        PlayerStats.Money += turretBlueprint.GetSellAmount();
+        Destroy(turret);
+        turretBlueprint = null;
+    }
     void OnMouseEnter()
     {
       
@@ -71,10 +113,12 @@ public class Node : MonoBehaviour
 
         rend.material.color = hoverColor;
     }
+
     void OnMouseExit()
     {
         rend.material.color = startColor;
     }
+
     void Update () 
     {
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);

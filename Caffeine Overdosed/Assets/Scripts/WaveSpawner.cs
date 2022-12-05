@@ -16,15 +16,13 @@ public class WaveSpawner : MonoBehaviour
 
     private int waveNumber = 0;
     // Update is called once per frame
-   
     void Update()
     {
         if(EnemiesLeft > 0){
             return;
         }
-        if (EnemiesLeft== 0 && waveNumber == waves.Length)
+        if (EnemiesLeft == 0 && waveNumber == waves.Length)
 		{
-			this.enabled = false;   
             gameManager.WinLevel();
 		}
         if (countdown <= 0f)

@@ -8,10 +8,7 @@ public class GameManager : MonoBehaviour
     public static bool GameIsOver;
 
     // Update is called once per frame
-    void Start()
-	{
-		GameIsOver = false;
-	}
+
     void Update()
     {
         if (GameIsOver)
