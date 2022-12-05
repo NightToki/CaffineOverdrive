@@ -20652,7 +20652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - spawnRate: 2
+  - spawnRate: 3
     minions:
     - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
       count: 20
@@ -20664,61 +20664,13 @@ MonoBehaviour:
       count: 100
     - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
       count: 100
-  - spawnRate: 1
+  - spawnRate: 4
     minions:
     - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
       count: 100
     - minion: {fileID: 7246774347691924530, guid: 3679af58a9c83884084332abfe53446b, type: 3}
       count: 100
     - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
-      count: 100
-  - spawnRate: 3
-    minions:
-    - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 3679af58a9c83884084332abfe53446b, type: 3}
-      count: 100
-    - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 0ac7751b31972ef4a941a27238c1aec0, type: 3}
-      count: 100
-  - spawnRate: 2
-    minions:
-    - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 3679af58a9c83884084332abfe53446b, type: 3}
-      count: 100
-    - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 0ac7751b31972ef4a941a27238c1aec0, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 513cc955b00406943831db64832e4d9a, type: 3}
-      count: 100
-  - spawnRate: 1
-    minions:
-    - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 3679af58a9c83884084332abfe53446b, type: 3}
-      count: 100
-    - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 0ac7751b31972ef4a941a27238c1aec0, type: 3}
-      count: 100
-    - minion: {fileID: 8958449141604691424, guid: 8823ebd0c89602449900121fc03fea65, type: 3}
-      count: 100
-  - spawnRate: 3
-    minions:
-    - minion: {fileID: 2202514839686396753, guid: 2955beb8617b9ac43922e8c5205eb039, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 3679af58a9c83884084332abfe53446b, type: 3}
-      count: 100
-    - minion: {fileID: 125205225317875571, guid: 892d314a879cdb14880b0e7767007d02, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 0ac7751b31972ef4a941a27238c1aec0, type: 3}
-      count: 100
-    - minion: {fileID: 8958449141604691424, guid: 8823ebd0c89602449900121fc03fea65, type: 3}
-      count: 100
-    - minion: {fileID: 7246774347691924530, guid: 513cc955b00406943831db64832e4d9a, type: 3}
       count: 100
   spawnPoint: {fileID: 687897441}
   timeBetweenWaves: 5
