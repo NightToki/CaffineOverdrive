@@ -42,6 +42,7 @@ public class Minion : MonoBehaviour
         
         Destroy(gameObject);
         WaveSpawner.EnemiesLeft--;
+        PlayerStats.Money +=1;
         PlayerStats.Count += 1;
     }
     void Update()

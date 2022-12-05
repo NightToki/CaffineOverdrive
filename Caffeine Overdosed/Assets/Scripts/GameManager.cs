@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
-        GameIsOver = true;
-        Debug.Log("Game Over!");
         SceneManager.LoadScene("GameOver");
     }
     

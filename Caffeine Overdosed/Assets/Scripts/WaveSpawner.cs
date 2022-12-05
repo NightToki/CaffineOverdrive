@@ -21,7 +21,7 @@ public class WaveSpawner : MonoBehaviour
         if(EnemiesLeft > 0){
             return;
         }
-        if (EnemiesLeft == 0 && waveNumber == waves.Length)
+        if (waveNumber == waves.Length)
 		{
             gameManager.WinLevel();
 		}
@@ -35,7 +35,7 @@ public class WaveSpawner : MonoBehaviour
         countdown = Mathf.Clamp(countdown, 0F, Mathf.Infinity);
         waveCountdownText.text = string.Format("{0:00.00}",countdown);
     }
-     IEnumerator SpawnWave()
+    IEnumerator SpawnWave()
     {
         WaveLayout wave = waves[waveNumber];
         for(int j = 0; j < wave.minions.Length; j++){
@@ -47,8 +47,14 @@ public class WaveSpawner : MonoBehaviour
             }
         }
 		waveNumber++;
+        PlayerStats.Money += 150;
     }
+    void Awake()
+    {
+        waveNumber = 0;
+        EnemiesLeft = 0;
 
+    }
     void SpawnEnemy(GameObject minion)
     {
         Instantiate(minion, spawnPoint.position, spawnPoint.rotation);

@@ -15,25 +15,14 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTime = startMinutes * 60;
+        currentTime = 0 ;
     }
 
     // Update is called once per frame
     void Update()
     {   
-        currentTime -= Time.deltaTime;
+        currentTime += Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(currentTime);
         currentTimeText.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
-        if(currentTime <= 0)
-        {
-            FinishGame();
-        }
-    }
-
-    void FinishGame() 
-    {
-        Debug.Log("Defeat.");
-        
-        SceneManager.LoadScene("GameOver");
     }
 }
