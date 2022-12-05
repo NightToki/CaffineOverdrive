@@ -8,11 +8,15 @@ public class GameManager : MonoBehaviour
     public static bool GameIsOver;
 
     // Update is called once per frame
+    void Start()
+    {
+        GameIsOver = false;
+    }
 
     void Update()
     {
         if (GameIsOver)
-			return;
+            return;
         if (PlayerStats.Lives <= 0)
         {
             EndGame();
@@ -21,12 +25,13 @@ public class GameManager : MonoBehaviour
 
     void EndGame()
     {
+        GameIsOver = true;
         SceneManager.LoadScene("GameOver");
     }
-    
-	public void WinLevel()
-	{
-		GameIsOver = true;
-		SceneManager.LoadScene("WinScreen");
-	}
+
+    public void WinLevel()
+    {
+        GameIsOver = true;
+        SceneManager.LoadScene("WinScreen");
+    }
 }
